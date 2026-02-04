@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from "react";
 import { Modal, InputGroup, Form } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
 import { Produto } from "../../models/produto";
+import { MoneyUtils } from "../../utils/money-utils.ts";
 
 interface ProductSearchModalProps {
   show: boolean;
@@ -69,7 +70,7 @@ function ProductSearchModal({
                 className="list-group-item list-group-item-action"
                 onClick={() => handleProductClick(product.codigo_barras)}
               >
-                {product.nome} - <strong>R${Number(product.preco_venda).toFixed(2)}</strong>
+                {product.nome} - <strong>{MoneyUtils.formatarMoeda(product.preco_venda)}</strong>
                 <br />
                 <small>Código: {product.codigo_barras}</small>
               </button>

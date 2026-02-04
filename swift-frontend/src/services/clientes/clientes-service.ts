@@ -1,5 +1,5 @@
 import { GenericCrudService } from '../crud/generic-crud.ts'
-import { Cliente } from '../../models/cliente.ts'
+import { Cliente } from '../../models/cliente'
 
 export class ClienteService extends GenericCrudService<Cliente> {
 

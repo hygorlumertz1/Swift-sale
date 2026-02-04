@@ -1,20 +1,19 @@
-import { IsString, IsOptional, IsNotEmpty, Length } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, Length } from 'class-validator';
 
 export class CreateClientesDto {
-  @IsNotEmpty({ message: 'O nome é obrigatórrio'})
-  @IsString({ message: 'O nome deve ser um texto'})
+  @IsString()
+  @IsNotEmpty({ message: 'Nome é obrigatório' })
   nome: string;
 
-  @IsOptional()
-  @IsString({ message: 'O sobrenome deve ser um texto'})
-  sobrenome?: string;
+  @IsString()
+  @IsNotEmpty({ message: 'Sobrenome é obrigatório' })
+  sobrenome: string;
 
-  @IsNotEmpty({ message: 'O CPF é obrigatórrio'})
-  @IsString({ message: 'O CPF deve ser um texto'})
+  @IsString()
+  @IsNotEmpty({ message: 'CPF é obrigatório' })
   cpf: string;
 
-  @IsOptional()
   @IsString()
+  @IsOptional()
   telefone?: string;
-
 }
