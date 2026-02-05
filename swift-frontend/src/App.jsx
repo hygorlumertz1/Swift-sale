@@ -7,6 +7,7 @@ import Usuarios from "./pages/usuarios/Usuarios.tsx";
 import Vendas from "./pages/vendas/Vendas.tsx";
 import Configuracao from "./pages/configuracao/Configuracao.jsx"
 import Clientes from "./pages/clientes/Clientes.tsx"
+import Faturamento from "./pages/faturamento/Faturamento.tsx"
  
 import './styles/global.css';
 import 'simple-notify/dist/simple-notify.css';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/clientes" element={<ProtectedRoute><Clientes /></ProtectedRoute>} />
           <Route path="/configuracao" element={<ProtectedRoute><Configuracao /></ProtectedRoute>} />
           <Route path="/vendas" element={<ProtectedRoute><Vendas /></ProtectedRoute>} />
+          <Route path="/faturamento" element={<ProtectedRoute><Faturamento /></ProtectedRoute>} />
         </Routes>
       </AuthProvider>
     </Router>

@@ -1,0 +1,14 @@
+.top-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn-voltar {
+  position: fixed; /* muda de absolute para fixed */
+  right: 20px;
+  top: 20px; /* alinha com o botão da sidebar */
+  z-index: 100; /* garante que fique visível */
+}
